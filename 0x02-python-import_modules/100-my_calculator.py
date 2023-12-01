@@ -12,8 +12,8 @@ if __name__ == "__main__":
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
     else:
-        a = int(ars[1])
-        b = int(ars[3])
+        a = int(args[1])
+        b = int(args[3])
         operator = args[2]
         if operator == "+":
             print("{} {} {} = {}".format(a, operator, b, a + b))
