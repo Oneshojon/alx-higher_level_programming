@@ -56,7 +56,7 @@ class Node:
         Returns:
         Node: The reference to the next node.
         """
-        return self.__nextnode
+        return self.__next_node
 
     @next_node.setter
     def next_node(self, value):
