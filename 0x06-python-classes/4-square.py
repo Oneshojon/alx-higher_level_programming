@@ -1,8 +1,10 @@
 #!/usr/bin/python3
+"""Creates a square class"""
+
+
 class Square:
     """
     A class to represent a square
-
 
     Attributes:
     __size (int): The size of the square.
@@ -11,7 +13,6 @@ class Square:
     def __init__(self, size=0):
         """
         Initializes a new instance of the Square class.
-
 
         Args:
         size (int): The size of the square. Default to zero.
@@ -41,7 +42,6 @@ class Square:
         Args:
         value (int): The new size of the square.
 
-
         Raises:
         TypeError: If the value is not an integer.
         ValueError: If the value is less than 0.
@@ -57,7 +57,6 @@ class Square:
     def area(self):
         """
         Calculates and returns the area of a square.
-
 
         Returns:
         int: The area of the square.
