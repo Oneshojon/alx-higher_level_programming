@@ -131,6 +131,7 @@ class Rectangle:
         """
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
+
     def bigger_or_equal(rect_1, rect_2):
         """
         Compares two rectangles based in area.
@@ -141,7 +142,7 @@ class Rectangle:
 
         Raises:
             TypeError: if rect_1  or rect_2 not instance of Rectangle.
-        
+
         Returns:
             The Biggest rectangle or rect_1 if equal area.
         """
