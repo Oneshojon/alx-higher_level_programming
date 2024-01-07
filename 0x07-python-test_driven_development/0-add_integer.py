@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-"""Function that adds 3 numbers"""
+"""Function that adds 3 numbers
+
+Artributes:
+   add_integer: adds two numbers
+"""
 
 
 def add_integer(a, b=98):

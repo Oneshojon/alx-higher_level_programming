@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-"""Function to divide all elements of a matrix."""
+"""Function to divide all elements of a matrix.
+
+Artributes:
+    matrix_divided: Divides all elements of a matrix.
+"""
 
 
 def matrix_divided(matrix, div):
