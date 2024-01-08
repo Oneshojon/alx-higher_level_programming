@@ -1,37 +1,39 @@
 # The ``1-my_list.py`` module
-===================================
+============================================
 How to use 1-my_list.py
-===================================
+============================================
 
-This library has one function ``print_sorted``
+This library has one function ``print_sorted()``
 
-``print_sorted returns a list of integers sorted in ascending order.
+``print_sorted`` returns a list of integers sorted in ascending order.
 
 Importing the function:
-    >>>MyList = __import__('1-my_list').MyList
+    >>> MyList = __import__('1-my_list').MyList
 
 Test if MyList is a subclass and/or instance of list.
-    >>>my_list = MyList()
-    >>>isinstance(my_list, list)
+    >>> my_list = MyList()
+    >>> issubclass(MyList, list)
     True
 
-    >>>my_list = MyList()
-    >>>issubclass(MyList, my_list)
+    >>> my_list = MyList()
+    >>> isinstance(my_list, list)
     True
 
-Test if `print_sorted` is an attribute of class MyList.
-    >>>my_list = MyList()
-    >>>'print_sorted' in dir(MyList)
+Test if 'print_sorted' is an attribute of class MyList.
+    >>> my_list = MyList()
+    >>> 'print_sorted' in dir(MyList)
     True
 
 Test a list of positive numbers.
-    >>>my_list = MyList()
-    >>>list1 = [1, 4, 2, 3, 5]
-    >>>for i in list1:
-    ...    my_list.append(i)
-    >>>my_list.print_sorted()
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> my_list.print_sorted()
     [1, 2, 3, 4, 5]
-    
+
 Test a list of repeated numbers.
     >>> my_list = MyList()
     >>> my_list.append(3)
@@ -44,18 +46,22 @@ Test a list of repeated numbers.
 
 Test a list of negative numbers.
     >>> my_list = MyList()
-    >>>list1 = [-1, -4, -2, -3, -5]
-    >>>for i in list1:
-    ...    my_list.append(i)
-    >>>my_list.print_sorted()
+    >>> my_list.append(-1)
+    >>> my_list.append(-4)
+    >>> my_list.append(-2)
+    >>> my_list.append(-3)
+    >>> my_list.append(-5)
+    >>> my_list.print_sorted()
     [-5, -4, -3, -2, -1]
 
-Test a list of positive numbers.
-    >>>my_list = MyList()
-    >>>list1 = [1, 4, -2, 3, -5]
-    >>>for i in list1:
-    ...    my_list.append(i)
-    >>>my_list.print_sorted()
+Test a list of positive and negative numbers.
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(-2)
+    >>> my_list.append(3)
+    >>> my_list.append(-5)
+    >>> my_list.print_sorted()
     [-5, -2, 1, 3, 4]
 
 Test a list containing only one number.
@@ -69,7 +75,7 @@ Test a list containing only one number.
     >>> my_list.print_sorted()
     [3]
 
-    Test a list of positive string numbers.
+Test a list of positive string numbers.
     >>> my_list = MyList()
     >>> my_list.append("1")
     >>> my_list.append("4")
@@ -138,13 +144,13 @@ Passing more than one argument to sort method.
     >>> my_list = MyList()
     >>> my_list.print_sorted([1, 2])
     Traceback (most recent call last):
-       	...
+    	...
     TypeError: print_sorted() takes 1 positional argument but 2 were given
 
     >>> my_list = MyList()
     >>> my_list.print_sorted([1, 2], [3, 4])
     Traceback (most recent call last):
-       	...
+    	...
     TypeError: print_sorted() takes 1 positional argument but 3 were given
 
 Test the type of the print_sorted method.
@@ -167,3 +173,171 @@ Test to see if print_sorted() returns a new list.
     [1, 2, 7]
     >>> my_list
     [7, 1, 2]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
