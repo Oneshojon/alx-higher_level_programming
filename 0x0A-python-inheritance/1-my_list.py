@@ -18,8 +18,7 @@ class MyList(list):
 
         args:
             None
-
-        Returns:
-            list: In sorted form.
         """
-        return sorted(list)
+        list1 = self[:]
+	list1.sor()
+	print(list1)
