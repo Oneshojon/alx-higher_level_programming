@@ -20,5 +20,5 @@ class MyList(list):
             None
         """
         list1 = self[:]
-	list1.sor()
-	print(list1)
+        list1.sor()
+        print(list1)
