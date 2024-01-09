@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Function to check if an object is an intanse of a specified class.
+"""Function to check if an object inherits from class.
 
 Attribute:
 is_same_class: returns True or False
@@ -8,7 +8,8 @@ is_same_class: returns True or False
 
 def inherits_from(obj, a_class):
     """
-    Function to check if an object inherits a class.
+    Returns True if the object is an instance of a class that inherited
+    (directly or indirectly) from the specified class; otherwise False.
 
 
     Args:
@@ -18,4 +19,6 @@ def inherits_from(obj, a_class):
     Return:
         True or False.
     """
-    return isinstance(obj, a_class) and issubclass(obj, a_class)
+    if type(obj) is a_class:
+        return False
+    return issubclass(type(obj), a_class)
