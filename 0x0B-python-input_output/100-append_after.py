@@ -16,8 +16,7 @@ def append_after(filename="", search_string="", new_string=""):
     Returns: An appended file.
     """
     with open(filename, "r", encoding="utf-8") as file:
-        for line in file.readlines():
-            lines = file.readlines()
+        lines = file.readlines()
 
     with open(filename, "w", encoding="utf-8") as f:
         for line in lines:
