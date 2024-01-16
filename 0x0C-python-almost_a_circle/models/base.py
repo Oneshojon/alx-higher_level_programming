@@ -53,11 +53,11 @@ class Base:
         Args:
             list_obj:
         """
+        if list_objs is None:
+            list_objs = []
+        json_string = cls.to_json_string([b.to_dictionary() for b in list_objs])
         filename = "{}.json".format(cls.__name__)
         with open(filename, "w", encoding="utf-8") as f:
-            if list_objs is None:
-                f.write("[]")
-            json_string = cls.to_json_string(list_objs)
             f.write(json_string)
 
     @staticmethod
