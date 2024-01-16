@@ -110,13 +110,22 @@ class Base:
     @classmethod
     def load_from_file_csv(cls):
         '''Loads object to csv file.'''
-        filename = "{}.csv".format(cls.__name__)
-        try:
-            with open(filename, "r", encoding="utf-8") as csvfile:
-                csv_reader = csv.reader(csvfile)
-                return [cls.create(*row) for row in csv_reader]
-            except FileNotFoundError:
-                return []
+        from models.rectangle import Rectangle
+        from models.square import Square
+        ret = []
+        with open('{}.csv'.format(cls.__name__), 'r', newline='',
+                  encoding='utf-8') as f:
+            reader = csv.reader(f)
+            for row in reader:
+                row = [int(r) for r in row]
+                if cls is Rectangle:
+                    d = {"id": row[0], "width": row[1], "height": row[2],
+                         "x": row[3], "y": row[4]}
+                else:
+                    d = {"id": row[0], "size": row[1],
+                         "x": row[2], "y": row[3]}
+                ret.append(cls.create(**d))
+        return ret
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
