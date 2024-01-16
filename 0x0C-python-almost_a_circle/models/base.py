@@ -127,6 +127,14 @@ class Base:
                 ret.append(cls.create(**d))
         return ret
 
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        filename = "{}.csv".format(cls.__name__)
+        with open(filename, "w", newline="", encoding="utf-8") as csvfile:
+            csv_writer = csv.writer(csvfile)
+            for obj in list_objs:
+                csv_writer.writerow(obj.to_csv())
+
     @staticmethod
     def draw(list_rectangles, list_squares):
         import turtle
