@@ -107,7 +107,7 @@ class Base:
         except FileNotFoundError:
             return []
 
-     @classmethod
+    @classmethod
     def load_from_file_csv(cls):
         '''Loads object to csv file.'''
         from models.rectangle import Rectangle
@@ -127,7 +127,7 @@ class Base:
                 ret.append(cls.create(**d))
         return ret
 
-     @staticmethod
+    @staticmethod
     def draw(list_rectangles, list_squares):
         import turtle
         import time
