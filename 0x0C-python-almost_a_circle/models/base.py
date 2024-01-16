@@ -115,8 +115,8 @@ class Base:
             with open(filename, "r", encoding="utf-8") as csvfile:
                 csv_reader = csv.reader(csvfile)
                 return [cls.create(*row) for row in csv_reader]
-            except FileNotFoundError:
-                return []
+        except FileNotFoundError:
+            return []
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
